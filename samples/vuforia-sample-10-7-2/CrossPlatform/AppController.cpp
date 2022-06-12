@@ -24,7 +24,7 @@ extern void* javaVM;
 
 namespace
 {
-    constexpr char licenseKey[] = "";
+    constexpr char licenseKey[] = "Af1ix6j/////AAABmZrWRhDLwkzmjafg4wdRn3Y17PeyHwuLHNkzlOI8eT+nDWQ3jsUg48dcFSlIUAV3Kr11ZjJyNzEN/LeVulgMtFmNOrOlMu+Nm/chLH6Nu2utx0H7NEqgP8Ut+aT6H8AQdAT3/U1so/cvFUeyJpYAa1kV7s5NQONJeThpl4M7/l3raJ8+1LSes8Np+JKi9dv+ntIFyviDzzG4JoOIEwPZq7IDz1zuyHIlP6vYU12fhSJOkaMWK2OM8os7ArBsHmwMDdgRYzKLVsg84hxqkQKqp3w08v6mp+TfWcXH/x+rsSNzdqzkiW6dHsBAnm/94S+aOSdP5XExewQI52gzmQhbNU/VzlEp7NE8rwD0LC/wW6Gv";
 
     constexpr float NEAR_PLANE = 0.01f;
     constexpr float FAR_PLANE = 5.f;

@@ -9,6 +9,8 @@ package com.vuforia.engine.native_sample
 
 import android.app.Activity
 import android.content.res.AssetManager
+import android.hardware.camera2.CameraDevice
+import android.hardware.camera2.CameraManager
 import android.opengl.GLSurfaceView
 import android.os.Build
 import android.os.Bundle
@@ -20,6 +22,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NavUtils
 import androidx.core.view.GestureDetectorCompat
+import com.epson.moverio.hardware.camera.CaptureDataCallback
 import kotlinx.coroutines.*
 import java.nio.ByteBuffer
 import java.util.*
@@ -27,11 +30,22 @@ import javax.microedition.khronos.egl.EGLConfig
 import javax.microedition.khronos.opengles.GL10
 import kotlin.concurrent.schedule
 
+
 /**
  * Activity to demonstrate how to use Vuforia Image Target and Model Target features,
  * Video Background rendering and Vuforia lifecycle.
  */
 class VuforiaActivity : AppCompatActivity(), GLSurfaceView.Renderer, SurfaceHolder.Callback {
+
+    private val mCameraManager: CameraManager? = null
+    private val mCameraDevice: CameraDevice? = null
+    private val mSurfaceView: SurfaceView? = null
+
+    private val mCaptureDataCallback: CaptureDataCallback = object : CaptureDataCallback {
+        override fun onCaptureData(timestamp: Long, data: ByteArray?) {
+            // Do something with this camera data.
+        }
+    }
 
     private lateinit var mGLView : GLSurfaceView
 
